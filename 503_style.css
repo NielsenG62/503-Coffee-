@@ -1,0 +1,586 @@
+@charset "utf-8";
+/* http://meyerweb.com/eric/tools/css/reset/ 
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+
+/*  <!-- GIT 417: Chapter 1 Case Project
+    Author: Gabe Nielsen
+    Date: 27 August, 2021 */
+
+/* CSS Reset */
+html,
+body,
+div,
+span,
+applet,
+object,
+iframe,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+blockquote,
+pre,
+a,
+abbr,
+acronym,
+address,
+big,
+cite,
+code,
+del,
+dfn,
+em,
+img,
+ins,
+kbd,
+q,
+s,
+samp,
+small,
+strike,
+strong,
+sub,
+sup,
+tt,
+var,
+b,
+u,
+i,
+center,
+dl,
+dt,
+dd,
+ol,
+ul,
+li,
+fieldset,
+form,
+label,
+legend,
+table,
+caption,
+tbody,
+tfoot,
+thead,
+tr,
+th,
+td,
+article,
+aside,
+canvas,
+details,
+embed,
+figure,
+figcaption,
+footer,
+header,
+hgroup,
+menu,
+nav,
+output,
+ruby,
+section,
+summary,
+time,
+mark,
+audio,
+video {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    font-size: 100%;
+    font: inherit;
+    vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+menu,
+nav,
+section {
+    display: block;
+}
+body {
+    line-height: 1;
+}
+ol,
+ul {
+    list-style: none;
+}
+blockquote,
+q {
+    quotes: none;
+}
+blockquote:before,
+blockquote:after,
+q:before,
+q:after {
+    content: '';
+    content: none;
+}
+table {
+    border-collapse: collapse;
+    border-spacing: 0;
+}
+/* Global Styles */
+
+html {
+    font-family: 'Montserrat', sans-serif;
+}
+a {
+    text-decoration: none;
+    color: #000000;
+}
+a:visited {
+    color: #000000;
+}
+nav h2 {
+    display: none;
+    height: 0;
+}
+main {
+    max-width: 100%;
+    min-width: 1000px;
+    margin: 0 auto;
+}
+
+/* Navigation Styles */
+
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px;
+}
+h1 {
+    font-size: 30px;
+    font-weight: bold;
+    flex: 2;
+}
+nav li {
+    display: inline;
+    padding: 20px;
+}
+nav ul {
+    margin-right: 50px;
+}
+header a {
+    padding: 10px;
+    transition: all 0.3s;
+}
+nav a:hover {
+    color: #d7d7d7;
+}
+a.active_page {
+    color: #d7d7d7;
+}
+
+/* Cover Image */
+
+.cover_img {
+    position: relative;
+    text-align: center;
+    display: inline-block;
+}
+.cover_img img {
+    max-width: 100%;
+}
+h3 {
+    display: flex;
+    font-size: 20px;
+    justify-content: center;
+    line-height: 1.4em;
+    margin: 20px;
+    margin-bottom: 50px;
+}
+
+/* Index Main Body */
+
+.body {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    width: 75%;
+    margin: 0 auto;
+    margin-bottom: 80px;
+}
+h2 {
+    font-size: 25px;
+    font-weight: bold;
+    margin-bottom: 30px;
+    display: flex;
+    justify-content: center;
+}
+.body p {
+    max-width: 70%;
+    margin: 0 auto;
+    font-size: 20px;
+    line-height: 1.5em;
+    grid-row-start: 2;
+    align-self: center;
+}
+.body img {
+    height: 400px;
+    grid-row-start: 2;
+    margin: 0 auto;
+}
+
+/* Drinks Main Body */
+
+#drink_wrap {
+    display: flex;
+    max-width: 80%;
+    margin: 0 auto;
+    justify-content: center;
+}
+#drink_wrap p {
+    line-height: 1.5em;
+    width: 80%;
+    margin: auto;
+}
+#coffee {
+    flex: 1 1 0;
+    margin-right: 10px;
+}
+#coffee img {
+    height: 375px;
+    width: 375px;
+    margin: auto;
+    display: flex;
+    justify-content: center;
+    margin-bottom: 30px;
+}
+#alcohol {
+    flex: 1 1 0;
+    margin-left: 10px;
+}
+#alcohol img {
+    width: 500px;
+    display: flex;
+    justify-content: center;
+    margin: auto;
+    margin-bottom: 30px;
+}
+
+/* Food Main Body */
+
+#food_wrap img {
+    width: 300px;
+    height: auto;
+}
+#food_wrap .body {
+    width: 50%;
+}
+#food_wrap h2 {
+    grid-column-start: 1;
+    grid-column-end: 3;
+    margin-bottom: 30px;
+}
+#meals img {
+    grid-column-start: 1;
+}
+
+/* Covid Main Body */
+
+#covid {
+    padding-top: 100px;
+    border-top: 3px solid #d7d7d7;
+}
+#covid img {
+    height: 500px;
+}
+
+/* Purchase Main Body */
+
+.coffeePurchase {
+    font-size: 20px;
+    line-height: 1.5em;
+}
+.generalText {
+    margin: 0 auto;
+    text-align: center;
+    max-width: 60%;
+    margin-bottom: 60px;
+}
+.generalText h2 {
+    margin-bottom: 20px;
+}
+#coffeeSelection {
+    display: flex;
+    max-width: 80%;
+    margin: 0 auto;
+    justify-content: center;
+}
+#coffeeSelection img {
+    width: 90%;
+}
+.coffeeAbout {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.coffeeAbout h3 {
+    display: none;
+    height: 0;
+}
+.coffeeAbout .coffeeName {
+    font-weight: bold;
+    margin-bottom: 15px;
+    text-align: center;
+    font-size: 26px;
+    margin-top: 5px;
+}
+.coffeeAbout label {
+    line-height: 1.5em;
+    font-size: 16px;
+    text-align: center;
+}
+.coffeeAbout input {
+    height: 20px;
+    width: 35px;
+    font-size: 15px;
+}
+.coffeeAbout .dollars {
+    font-weight: bold;
+    font-size: 20px;
+}
+#confirm {
+    margin: 0 auto;
+    text-align: center;
+    margin-top: 80px;
+}
+#submitButton {
+    font-size: 17px;
+    font-family: 'Montserrat', sans-serif;
+}
+#cost {
+    font-weight: bold;
+}
+#name {
+    font-size: 20px;
+    font-family: 'Montserrat', sans-serif;
+}
+.submitMessage {
+    display: none;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 20px;
+    margin-top: 20px;
+}
+#noSubmit {
+    color: red;
+}
+
+/* Security */
+
+#security {
+    display: block;
+    padding-top: 100px;
+    border-top: 3px solid #d7d7d7;
+    text-align: center;
+}
+#security p {
+    margin-bottom: 10px;
+    text-align: left;
+    max-width: 80%;
+}
+#objects {
+    margin: auto;
+    margin-bottom: 10px;
+    background-color: #d7d7d7;
+    width: 70%;
+    padding-top: 15px;
+    padding-bottom: 15px;
+}
+#objects p {
+    text-align: left;
+}
+#screen {
+    margin-top: 30px;
+}
+#tips {
+    font-size: 20px;
+    list-style-type: disc;
+    margin: auto;
+    margin-top: 50px;
+    line-height: 1.4;
+    width: 85%;
+    text-align: left;
+}
+#tips li {
+    padding-bottom: 15px;
+}
+#tips a {
+    text-decoration: underline;
+    font-weight: 600;
+}
+#tips a:hover {
+    text-decoration: none;
+}
+
+/* Tutorial */
+
+#tutorialBody {
+    display: block;
+    padding-top: 100px;
+    border-top: 3px solid #d7d7d7;
+}
+.heading {
+    font-weight: bold;
+    margin: auto;
+    margin-top: 50px;
+    margin-bottom: 10px;
+    padding-top: 15px;
+    border-top: 2px solid #d7d7d7;
+    width: 60%;
+}
+code {
+    width: 75%;
+    margin: auto;
+    line-height: 1.5;
+    font-family: 'Courier New', Courier, monospace;
+}
+.tutorialResults {
+    margin: auto;
+    margin-bottom: 40px;
+    text-align: center;
+    font-size: 20px;
+}
+#flowchart {
+    display: block;
+    margin: 20px auto;
+}
+#tutorialButton {
+    height: 30px;
+    width: 50px;
+}
+.numberInput {
+    width: 50px;
+    font-size: 19px;
+}
+
+/* Contact */
+
+#contactHead {
+    display: block;
+    padding-top: 100px;
+    border-top: 3px solid #d7d7d7;
+    text-align: center;
+}
+#contactHead p {
+    margin: auto;
+    margin-bottom: 10px;
+    text-align: center;
+    max-width: 80%;
+}
+#contactForm {
+    font-size: 18px;
+    margin: auto;
+    border: 3px solid #d7d7d7;
+    width: 40%;
+    padding: 20px;
+    line-height: 1.5;
+    text-align: center;
+}
+#contactInfo {
+    display: grid;
+    grid-template-columns: 1fr 2fr;
+    width: 50%;
+    margin: auto;
+    grid-row-gap: 10px;
+}
+#email {
+    grid-row-start: 2;
+    grid-column-start: 2;
+}
+#firstTime {
+    margin-top: 30px;
+    margin-bottom: 30px;
+}
+#yes {
+    margin-right: 60px;
+}
+#find {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    width: 70%;
+    margin: auto;
+    grid-column-gap: 10px;
+    margin-bottom: 30px;
+}
+#find p {
+    grid-column-start: span 2;
+    text-align: center;
+}
+#find input {
+    text-align: left;
+}
+#comment {
+    height: 100px;
+    width: 400px;
+    margin-bottom: 30px;
+}
+#game {
+    margin-bottom: 30px;
+}
+.error {
+    font-size: 18px;
+    text-align: center;
+    color: red;
+    font-weight: bold;
+}
+.results {
+    text-align: center;
+}
+
+/* Footer */
+
+footer {
+    background-color: #d7d7d7;
+    padding-top: 50px;
+    margin-top: 50px;
+    padding-bottom: 20px;
+}
+#store_info {
+    display: flex;
+    width: 100%;
+    justify-content: space-evenly;
+    text-align: center;
+    line-height: 1.3em;
+}
+h5 {
+    font-weight: 700;
+}
+#socials {
+    display: flex;
+    justify-content: center;
+    align-content: center;
+}
+#socials li {
+    padding: 10px;
+    margin-top: 20px;
+}
+#socials a:hover {
+    filter: brightness(50%);
+}
+footer img {
+    width: 30px;
+}
+footer a {
+    height: 30px;
+    width: 30px;
+    transition: all 0.3s;
+}
+small {
+    display: flex;
+    justify-content: center;
+}

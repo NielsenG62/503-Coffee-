@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <!-- GIT 417: Chapter 1 Case Project
+         Author: Gabe Nielsen
+         Date: 1 October, 2021 -->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="503_style.css">
+    <title>(503) Coffee | Contact</title>
+    <script src="modernizr.custom.05819.js"></script>
+</head>
+
+<!--  Header Start  -->
+
+<body>
+    <header>
+        <h1><a href="index.html">(503) Coffee</a></h1>
+        <nav>
+            <h2>Navigation</h2>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="drinks.html">Drinks</a></li>
+                <li><a href="food.html">Food</a></li>
+                <li><a href="purchase.html">Purchase</a></li>
+                <li><a href="covid.html">Covid-19</a></li>
+                <li><a href="security.html">Security</a></li>
+                <li><a class="active_page" href="contact.html">Contact</a></li>
+                <li><a href="tutorial.html">Tutorial</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <!--  Main Start  -->
+
+    <main>
+        <article>
+            <h2>Your form has been submitted</h2>
+            <div class="results">
+               <h3>You entered the following data:</h3>
+         
+               <script>
+                   var formData = location.search;
+                   formData = formData.substring(1, formData.length);
+                   while (formData.indexOf("+") !== -1) {
+                      formData = formData.replace("+", " ");
+                   }
+                   formData = decodeURIComponent(formData);
+                   var formArray = formData.split("&");
+                   for (var i = 0; i < formArray.length; i = i + 1) {
+                      document.write("<p>" + formArray[i] + "</p>");
+                   }
+               </script>
+            </div>
+         </article>
+    </main>
+
+    <!--  Footer Start  -->
+
+    <footer>
+        <section id="store_info">
+            <div id="contact">
+                <h5>Contact:</h5>
+                <p>123 Cool St. Wilsonville, OR 97070</p>
+                <p>(503) 555-1234</p>
+            </div>
+            <div id="hours">
+                <h5>Hours:</h5>
+                <p>7am - 8pm</p>
+            </div>
+        </section>
+        <ul id="socials">
+            <li><a href="#"><img src="images/instagram-color.png" alt="Instagram"></a></li>
+            <li><a href="#"><img src="images/facebook-color.png" alt="Facebook"></a></li>
+        </ul>
+        <small>Copyright &copy; 2021, (503) Coffee</small>
+    </footer>
+    <!-- +++++    Javascript Link    +++++ -->
+    <script src="javascript/contact.js"></script>
+</body>
+
+</html>

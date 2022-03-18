@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <!-- GIT 417: Chapter 1 Case Project
+         Author: Gabe Nielsen
+         Date: 24 September, 2021 -->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="503_style.css">
+    <title>(503) Coffee | Security</title>
+    <script src="modernizr.custom.05819.js"></script>
+</head>
+
+<!-- ******** Header Start ********* -->
+
+<body>
+    <header>
+        <h1><a href="index.html">(503) Coffee</a></h1>
+        <nav>
+            <h2>Navigation</h2>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="drinks.html">Drinks</a></li>
+                <li><a href="food.html">Food</a></li>
+                <li><a href="purchase.html">Purchase</a></li>
+                <li><a href="covid.html">Covid-19</a></li>
+                <li><a class="active_page" href="security.html">Security</a></li>
+                <li><a href="contact.html">Contact</a></li>
+                <li><a href="tutorial.html">Tutorial</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <!-- ******* Main Start ********** -->
+
+    <main>
+        <section class="body" id="security">
+            <h2>A Little Lesson on Security</h2>
+            <p>Browsing the web is usually harmless, but there are many ways for people to abuse the web and 
+                make it unsafe. For instance, here are some of the things that someone can gather just from 
+                Javascript.</p>
+            <div id="objects">
+            <p id="navigator"></p>
+            <p id="screen"></p>
+            </div>
+            <p>These values are not anything to worry about, as they are needed to make sure that Javascript
+                runs like it is supposed to. But it does show that there are ways to get information about 
+                you without you telling anyone.</p>
+            <p>Here are some tips to help you stay secure while browsing the web, with links to articles
+                explaining more in-depth.</p>
+            <ul id="tips">
+                <li><a class="article" href="https://www.cloudflare.com/learning/ssl/why-is-http-not-secure/" target="_blank">Checking that a site uses HTTPS</a>
+                    instead of the normal HTTP is an easy way to make sure that the site is using an encrypted connection.</li>
+                <li><a class="article" href="https://www.realsimple.com/work-life/technology/safety-family/digital-downloads-safety" target="_blank">
+                    Learning the best practices for downloading</a> is a great way to make sure that you don't accidentally download something malicious.</li>
+                <li><a class="article" href="https://www.it.ucsb.edu/secure-compute-research-environment-user-guide/password-best-practices" target="_blank">
+                    Creating strong passwords</a> is essential to staying secure on the web. As a general rule, the longer the password, the better.</li>
+                </ul>
+        </section>
+    </main>
+
+    <!-- ******* Footer Start ******** -->
+
+    <footer>
+        <section id="store_info">
+            <div id="contact">
+                <h5>Contact:</h5>
+                <p>123 Cool St. Wilsonville, OR 97070</p>
+                <p>(503) 555-1234</p>
+            </div>
+            <div id="hours">
+                <h5>Hours:</h5>
+                <p>7am - 8pm</p>
+            </div>
+        </section>
+        <ul id="socials">
+            <li><a href="#"><img src="images/instagram-color.png" alt="Instagram"></a></li>
+            <li><a href="#"><img src="images/facebook-color.png" alt="Facebook"></a></li>
+        </ul>
+        <small>Copyright &copy; 2021, (503) Coffee</small>
+    </footer>
+    <!-- +++++    Javascript Link    +++++ -->
+    <script src="javascript/security.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <!-- GIT 417: Chapter 1 Case Project
+         Author: Gabe Nielsen
+         Date: 1 October, 2021 -->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="503_style.css">
+    <!-- These 2 lines of code get the highlight js code library from a cloud content distribution network (CDN) -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.15.5/highlight.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.15.5/languages/javascript.min.js"></script>
+    <!-- In order to add html code examples this line needs to be in the head tag -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.15.5/languages/xml.min.js"></script>
+    <!-- This line is needed for the default CSS style -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.15.5/styles/default.min.css">
+    <!-- End of hightlight JS code library CDN declarations Everything after this is your design and tutorial-->
+    
+    <!-- CSS Styles can be used if you want to make it work with your existing portfolio site CSS design or a brand new design altogehter -->
+    
+    <script>hljs.initHighlightingOnLoad();</script> 
+    <title>(503) Coffee | Tutorial</title>
+    <script src="modernizr.custom.05819.js"></script>
+</head>
+
+<!-- ******** Header Start ********* -->
+
+<body>
+    <header>
+        <h1><a href="index.html">(503) Coffee</a></h1>
+        <nav>
+            <h2>Navigation</h2>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="drinks.html">Drinks</a></li>
+                <li><a href="food.html">Food</a></li>
+                <li><a href="purchase.html">Purchase</a></li>
+                <li><a href="covid.html">Covid-19</a></li>
+                <li><a href="security.html">Security</a></li>
+                <li><a href="contact.html">Contact</a></li>
+                <li><a class="active_page" href="tutorial.html">Tutorial</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <!-- ******* Main Start ********** -->
+
+    <main>
+        <section class="body" id="tutorialBody">
+            <h2>The if/else Statements</h2>
+            <p>
+                For someone that is learning JavaScript, the if/else statements really have the feeling of opening up the language. These are the introduction to decision making statements that really bring your code to life. 
+            </p>
+            <h3 class="heading">The if Statement</h3>
+            <p>
+                The if statement is used to execute specific code if a condition returns truthy. The most basic form of an if statement looks like this:
+            </p>
+            <pre>
+                <code class="javascript">
+                    if (condition) {
+                        statements
+                    }
+                </code>
+            </pre>
+            <p>
+                When this statement is being looked at, the condition in the parentheses is tested. If it returns true, the set of statements within the brackets are executed. If the condition returns falsy, the statements will be stepped over. Let's look at a basic example.
+            </p>
+            <pre>
+                <code class="javascript">
+                    x = 10;
+                    if (x &gt; 5) {
+                        numberResults1 = 'x is greater than 5'
+                    }
+                </code>
+            </pre>
+            <div class="tutorialResults">
+                <p id="numberResults1">Results</p>
+                <button id="tutorialButton">Run</button>
+            </div>
+            <p>
+                In this example, x is defined to be the value of 10. An if statement then checks if x is greater than 5. Since that condition is true, the condition is run. But if we also want a result that would tell us if x is less than 5, we would have to add an else statement. 
+            </p>
+            <h3 class="heading">The else statement</h3>
+            <p>
+                The else statement is an addition to the if statement that appears after an if statement. Without an else statement, when an if condition returns false, it is stepped over. The else statement defines what happens when the if condition returns false. The basic if/else syntax is as follows:
+            </p>
+            <pre>
+                <code class="javascript">
+                    if (condition) {
+                        statements 1
+                    } else {
+                        statements 2
+                    }
+                </code>
+            </pre>
+            <p>
+                When we run this statement is being run, first, the if condition is tested. If the condition returns true, the first set of statements are run, and the second set are stepped over. If the condition returns false, the opposite happens, where the first statements are skipped over, and the second set is executed. Let's expand on our first example.
+            </p>
+            <pre>
+                <code class="javascript">
+                    x = numberInput1.value;
+                    if (x &gt; 5) {
+                        numberResults2 = 'x is greater than 5'
+                    } else {
+                        numberResults2 = 'x is less than 5'
+                    }
+                </code>
+            </pre>
+            <div class="tutorialResults">
+                <p id="numberResults2">Results</p>
+                <label for="numberInput1">x = </label>
+                <input class="numberInput" id="numberInput1" type="number" name="numberInput1">
+            </div>
+            <p>
+                This example is able to properly tell you if the number in the box is greater than or less than 5. But if you notice, when x = 5, the function still displays that x is less than 5. This is where we make use of a nested if statement. 
+            </p>
+            <h3 class="heading">Nested if and if/else statements</h3>
+            <p>
+                As you can imagine, you will often run into situations while creating JavaScript code where you will not have a straight forward decision making process. In any case, you can always nest if or if/else statements inside of other statements. This can be written to look like this:
+            </p>
+            <pre>
+                <code class="javascript">
+                    if (condition 1) {
+                        statements 1
+                    } else if (condition 2) {
+                        statements 2
+                    } else if (condition 3) {
+                        statements 3
+                    }
+                    ...
+                      <span class="hljs-keyword">else</span> {
+                        statements
+                    }
+                </code>
+            </pre>
+            <p>
+                This structure, in theory, could go on as long as you needed it to. When if statements start nesting, it is good to think about the whole statement as a flow chart. The below chart shows the above code as a flow chart.
+            </p>
+            <img id="flowchart" src="images/flowchart.jpg" alt="a flowchart">
+            <p>
+                Lets revisit our number example. In it's current state, the result that is given if x = 5 is incorrect. We can easily add an else if statement to adjust for that.
+            </p>
+            <pre>
+                <code class="javascript">
+                    x = numberInput2.value;
+                    if (x &gt; 5) {
+                        numberResults3 = 'x is greater than 5'
+                    } else if (x == 5) {
+                        numberResults3 = 'x is equal to 5'
+                    } else {
+                        numberResults3 = 'x is less than 5'
+                    }
+                </code>
+            </pre>
+            <div class="tutorialResults">
+                <p id="numberResults3">Results</p>
+                <label for="numberInput2">x = </label>
+                <input class="numberInput" id="numberInput2" type="number" name="numberInput2">
+            </div>
+            <p>
+                With the addition of the else if statement, we have now covered our options. This specific example needs three options in the decision making process, but you can imagine situations where there are many more to make just for one output. With the inclusion of decision making statements like the if/else statements, you can really bring your website to life, reacting and responding to the user, no matter the circumstance. 
+            </p>
+        </section>
+        
+    </main>
+
+    <!-- ******* Footer Start ******** -->
+
+    <footer>
+        <section id="store_info">
+            <div id="contact">
+                <h5>Contact:</h5>
+                <p>123 Cool St. Wilsonville, OR 97070</p>
+                <p>(503) 555-1234</p>
+            </div>
+            <div id="hours">
+                <h5>Hours:</h5>
+                <p>7am - 8pm</p>
+            </div>
+        </section>
+        <ul id="socials">
+            <li><a href="#"><img src="images/instagram-color.png" alt="Instagram"></a></li>
+            <li><a href="#"><img src="images/facebook-color.png" alt="Facebook"></a></li>
+        </ul>
+        <small>Copyright &copy; 2021, (503) Coffee</small>
+    </footer>
+    <!-- +++++    Javascript Link    +++++ -->
+    <script src="javascript/tutorial.js"></script>
+</body>
+
+</html>

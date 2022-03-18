@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <!-- GIT 417: Chapter 1 Case Project
+         Author: Gabe Nielsen
+         Date: 17 September, 2021 
+        
+         For this week's project, I made heavy use of the step debugger tool. I made breakpoints at every major function,
+         and then took each one step by step to see what was happening and where I was missing something. I also used the
+         watch expressions to see where exactly key variables were being redefined. 
+        -->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="503_style.css">
+    <title>(503) Coffee | Purchase</title>
+    <script src="modernizr.custom.05819.js"></script>
+</head>
+
+<!--  Header Start  -->
+
+<body>
+    <header>
+        <h1><a href="index.html">(503) Coffee</a></h1>
+        <nav>
+            <h2>Navigation</h2>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="drinks.html">Drinks</a></li>
+                <li><a href="food.html">Food</a></li>
+                <li><a class="active_page" href="purchase.html">Purchase</a></li>
+                <li><a href="covid.html">Covid-19</a></li>
+                <li><a href="security.html">Security</a></li>
+                <li><a href="contact.html">Contact</a></li>
+                <li><a href="tutorial.html">Tutorial</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <!--  Main Start  -->
+
+    <main>
+        <section>
+            <div class="cover_img">
+                <img src="images/coffee_cup.jpg" alt="A coffee cup next to a plant">
+                <h3>123 Cool St. Wilsonville, OR 97070<br>
+                    Open 7am to 8pm every day of the week</h3>
+            </div>
+        </section>
+        <form class="coffeePurchase">
+            <section class="generalText">
+                <h2>Bring (503) With You Wherever You Are</h2>
+                <p>Sometimes you can't make it in to the store. But that doesn't mean that you have to
+                    be without your favorite beans. Heart Coffee has allowed us to sell some of our favorite
+                    beans directly to you. While we can't ship beans to your home, you can place an order to ensure that
+                    we have a bag with your name on it to pick up in store. We will hold your order for 24 hours
+                    before putting the beans back on the shelf.
+                </p>
+            </section>
+            <fieldset id="coffeeSelection">
+                <section class="coffeeAbout">
+                    <h3>Stereo Blend</h3>
+                    <img src="images/stereo.jpg" alt="Stereo seasonal blend">
+                    <label class="coffeeName">Stereo Seasonal Blend</label>
+                    <label>Dark chocolate, lychee, marzipan</label>
+                    <label>Size: 16oz</label>
+                    <label class="dollars">$20</label>
+                    <input type="number" min="0" max="5" id="stereoHold" value="0">
+                </section>
+                <section class="coffeeAbout">
+                    <h3>Kenya Nyawira</h3>
+                    <img src="images/kenya_nyawira.jpg" alt="Kenya Nyawira AB">
+                    <label class="coffeeName">Kenya Nyawira AB</label>
+                    <label>Pineapple, pear, honeycomb</label>
+                    <label>Size: 10.5oz</label>
+                    <label class="dollars">$22</label>
+                    <input type="number" min="0" max="5" id="kenyaHold" value="0">
+                </section>
+                <section class="coffeeAbout">
+                    <h3>Phono - Honduras</h3>
+                    <img src="images/phono.jpg" alt="Phono - Honduras Ramon Hernandez">
+                    <label class="coffeeName">Phono - Honduras</label>
+                    <label>Apricot, almond, hibiscus</label>
+                    <label>Size: 16oz</label>
+                    <label class="dollars">$20</label>
+                    <input type="number" min="0" max="5" id="phonoHold" value="0">
+                </section>
+            </fieldset>
+            <fieldset id="confirm">
+                <p>Total due at purchase: <span id="cost">$0</span></p>
+                <label for="name">Name:</label>
+                <input type="text" id="name" name="name" maxlength="15" required>
+                <input type="button" id="submitButton" value="Put On Hold">
+                <p class="submitMessage" id="noSubmit"></p>
+                <p class="submitMessage" id="submit"></p>
+            </fieldset>
+        </form>
+    </main>
+
+    <!--  Footer Start  -->
+
+    <footer>
+        <section id="store_info">
+            <div id="contact">
+                <h5>Contact:</h5>
+                <p>123 Cool St. Wilsonville, OR 97070</p>
+                <p>(503) 555-1234</p>
+            </div>
+            <div id="hours">
+                <h5>Hours:</h5>
+                <p>7am - 8pm</p>
+            </div>
+        </section>
+        <ul id="socials">
+            <li><a href="#"><img src="images/instagram-color.png" alt="Instagram"></a></li>
+            <li><a href="#"><img src="images/facebook-color.png" alt="Facebook"></a></li>
+        </ul>
+        <small>Copyright &copy; 2021, (503) Coffee</small>
+    </footer>
+
+    <!-- Javascript -->
+    <script src="javascript/purchase.js"></script>
+</body>
+</html>

@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <!-- GIT 417: Chapter 1 Case Project
+         Author: Gabe Nielsen
+         Date: 1 October, 2021 -->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="503_style.css">
+    <title>(503) Coffee | Contact</title>
+    <script src="modernizr.custom.05819.js"></script>
+</head>
+
+<!-- ******** Header Start ********* -->
+
+<body>
+    <header>
+        <h1><a href="index.html">(503) Coffee</a></h1>
+        <nav>
+            <h2>Navigation</h2>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="drinks.html">Drinks</a></li>
+                <li><a href="food.html">Food</a></li>
+                <li><a href="purchase.html">Purchase</a></li>
+                <li><a href="covid.html">Covid-19</a></li>
+                <li><a href="security.html">Security</a></li>
+                <li><a class="active_page" href="contact.html">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <!-- ******* Main Start ********** -->
+
+    <main>
+        <section class="body" id="contactHead">
+            <h2>Tell us about your experience!</h2>
+            <p>Wish we had a game you like? Did we somehow make your day? We want to know how 
+                your visits have gone. Whether you want to praise the barista that served you,
+                or give constructed feedback, we want to hear from you. We operate for you, so we want you to have
+                the best experience we can provide while in our shop.
+            </p>
+        </section>
+        <p id="errorText"></p>
+    <form id="contactForm">
+            <div id="contactInfo">
+                <label for="name">Name*</label>
+                <input type="text" id="formName" name="name" >
+                <label for="email">Email*</label>
+                <input type="email" name="email" id="email" >
+            </div>
+            <div id="firstTime">
+                <p>Was this your first time at (503)?*</p>
+                <label for="yes">Yes</label>
+                <input type="radio" id="yes" class="button" value="yes" name="newCustomer" >
+                <label for="no">No</label>
+                <input type="radio" id="no" class="button" value="no" name="newCustomer">
+            </div>
+            <div id="find">
+                <p>How did you find out about (503)?</p>
+                <label for="facebook">Facebook</label>
+                <input type="checkbox" name="facebook" id="facebook">
+                <label for="instagram">Instagram</label>
+                <input type="checkbox" name="instagram" id="instagram">
+                <label for="google">Google</label>
+                <input type="checkbox" name="google" id="google">
+                <label for="mouth">Word of mouth</label>
+                <input type="checkbox" name="mouth" id="mouth">
+                <label for="other">Other</label>
+                <input type="text" name="other" id="other">
+            </div>
+            <label for="comment">What would you like to tell us about your visit?</label><br>
+            <textarea name="comment" id="comment" rows="4" cols="50"></textarea><br>
+            <label for="game">Is there a game you would like us to look into getting?</label>
+            <input type="text" name="game" id="game"><br>
+            <input type="submit" id="submitButton" value="Submit">
+        </form>
+    </main>
+
+    <!-- ******* Footer Start ******** -->
+
+    <footer>
+        <section id="store_info">
+            <div id="contact">
+                <h5>Contact:</h5>
+                <p>123 Cool St. Wilsonville, OR 97070</p>
+                <p>(503) 555-1234</p>
+            </div>
+            <div id="hours">
+                <h5>Hours:</h5>
+                <p>7am - 8pm</p>
+            </div>
+        </section>
+        <ul id="socials">
+            <li><a href="#"><img src="images/instagram-color.png" alt="Instagram"></a></li>
+            <li><a href="#"><img src="images/facebook-color.png" alt="Facebook"></a></li>
+        </ul>
+        <small>Copyright &copy; 2021, (503) Coffee</small>
+    </footer>
+    <!-- +++++    Javascript Link    +++++ -->
+    <script src="javascript/contact.js"></script>
+</body>
+
+</html>
